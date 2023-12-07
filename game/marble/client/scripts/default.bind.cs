@@ -236,7 +236,8 @@ function spewmovevars()
 
 function gamepadYaw(%val)
 {
-   if( $pref::invertXCamera )
+    echo("controllerSens:" SPC $pref::Input::ControllerSensitivity);
+    if ( $pref::invertXCamera )
       %val *= -1.0;
       
    // if we get a non zero val, the user must have moved the stick, so switch 
@@ -249,7 +250,7 @@ function gamepadYaw(%val)
    if (!$mvDeviceIsKeyboardMouse)
    {
       %scale = (ServerConnection.gameState $= "wait") ? -0.1 : 3.14;
-      $mvYawRightSpeed = -(%scale * %val);
+      $mvYawRightSpeed = -(%scale * %val * (0.5 + ($pref::Input::ControllerSensitivity * 50)) );
    }
 }
 

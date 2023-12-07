@@ -135,7 +135,7 @@ void Marble::processCameraMove(const Move* move)
         else
             this->mLastYaw -= 0.0544000044465065;
     }
-    float delta_new = this->mLastYaw * 0.7 * 6.283185307179586 * 0.03200000151991844;
+    float delta_new = this->mLastYaw * 0.7 * 6.283185307179586 * 0.03200000151991844 * 2.0; // max of 2x previous maximum sensitivity
     if ((this->mMode & CameraHoverMode) == 0)
     {
         if (this->mCenteringCamera)

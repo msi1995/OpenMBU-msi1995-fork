@@ -324,6 +324,7 @@ $Text::FXVol = "Effects Volume";
 $Text::InvX = "Camera X-Axis";
 $Text::InvY = "Camera Y-Axis";
 $Text::MouseSensitivity = "Mouse Sensitivity";
+$Text::ControllerSensitivity = "Controller Sensitivity";
 $Text::InvOnOff = "Normal\tInverted";
 $Text::VideoOptions = "Video Options";
 $Text::FullscreenResolution = "Fullscreen Res";
