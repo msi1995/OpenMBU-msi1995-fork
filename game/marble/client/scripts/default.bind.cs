@@ -236,7 +236,6 @@ function spewmovevars()
 
 function gamepadYaw(%val)
 {
-    echo("controllerSens:" SPC $pref::Input::ControllerSensitivity);
     if ( $pref::invertXCamera )
       %val *= -1.0;
       
